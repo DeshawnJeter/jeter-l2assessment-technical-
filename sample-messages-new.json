@@ -1,0 +1,84 @@
+{
+  "testMessages": [
+    {
+      "id": 1,
+      "title": "Production Outage (Should be High)",
+      "message": "Our entire platform is down. None of our customers can log in and we're losing sales every minute. This needs to be fixed immediately.",
+      "expectedResults": {
+        "category": "Technical Problem",
+        "urgency": "High",
+        "recommendedAction": "Escalate to engineering team immediately"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Simple Feature Request (Should be Low)",
+      "message": "It would be really nice if I could export my data as a CSV file. Not urgent, just a thought!",
+      "expectedResults": {
+        "category": "Feature Request",
+        "urgency": "Low",
+        "recommendedAction": "Log in the product backlog and share with the product team"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Billing Confusion (Should be Medium)",
+      "message": "I was charged twice this month for my subscription. Can someone look into this and let me know what happened?",
+      "expectedResults": {
+        "category": "Billing Issue",
+        "urgency": "Medium",
+        "recommendedAction": "Direct to billing portal or billing team"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Angry All-Caps Message (Should be High, not Low)",
+      "message": "MY ACCOUNT HAS BEEN LOCKED FOR THREE DAYS AND NO ONE IS RESPONDING TO MY EMAILS. THIS IS COMPLETELY UNACCEPTABLE.",
+      "expectedResults": {
+        "category": "Technical Problem",
+        "urgency": "High",
+        "note": "Old urgency scorer incorrectly reduced score for ALL CAPS — AI handles this correctly now"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Positive Feedback with Exclamation Marks (Should be Low)",
+      "message": "Just wanted to say your support team is absolutely incredible!!! They solved my issue in under 10 minutes! Amazing service!!!",
+      "expectedResults": {
+        "category": "General Inquiry",
+        "urgency": "Low",
+        "note": "Old urgency scorer inflated score due to '!!!' — AI recognizes this as positive feedback"
+      }
+    },
+    {
+      "id": 6,
+      "title": "General How-To Question (Should be Low)",
+      "message": "Hi, I just signed up and I'm not sure how to invite other team members to my workspace. Is there a guide for that?",
+      "expectedResults": {
+        "category": "General Inquiry",
+        "urgency": "Low",
+        "recommendedAction": "Respond with FAQ or help center link"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Payment Failure Blocking Access (Should be High)",
+      "message": "My credit card payment failed and now I can't access any of my projects. I have a client demo in two hours and I really need this resolved.",
+      "expectedResults": {
+        "category": "Billing Issue",
+        "urgency": "High",
+        "note": "Billing issue with time pressure and access blocked — should escalate"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Minor UI Bug (Should be Medium)",
+      "message": "The dark mode toggle doesn't seem to save my preference. Every time I refresh the page it resets back to light mode. Bit annoying but not a dealbreaker.",
+      "expectedResults": {
+        "category": "Technical Problem",
+        "urgency": "Medium",
+        "recommendedAction": "Gather reproduction steps and log for engineering team"
+      }
+    }
+  ]
+}
